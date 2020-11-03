@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR / HEADER */
+
+nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    background: #222222;
+}
+
+nav img {
+    position: absolute;
+    width: 100px;
+    top: 15px;
+    left: 10%;
+}
+nav ul {
+    margin-right: 25px;
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    line-height: 80px;
+}
+nav ul li a {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+}
+nav ul li a:hover {
+    color: #c1c1c1;
+}
+
+/* NAVIGATION BAR LABEL */
+
+label #button,
+label #X{
+    display: none;
+    margin-right: 35px;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+}
+#check {
+    display: none;
+}
+
+/* MAIN */
+
+.main {
+    width: 100%;
+}
+.wrapper {
+    width: 100%;
+}
+div article img {
+    width: 100%;
+}
+
+.main h1 {
+    margin: 115px 50px 75px 50px;
+    padding: 50px 30px 0;
+    line-height: 44px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: #186bbc;
+}
+
+.main p {
+    padding: 50px 50px;
+    line-height: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.bottom-text {
+    margin-bottom: 50px;
+}
+
+/* FOOTER */
+
+.footer {
+    display: block;
+    box-sizing: border-box;
+    padding: 70px 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #222222;
+}
+.footer_div {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: 1100px;
+}
+.footer_div .footer_logo {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 35%;
+}
+.footer_div .footer_logo img{
+    padding-top: 5%;
+    height: auto;
+    width: 40%;
+
+}
+.footer_div .footer_list {
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+    width: calc(21.6666666667% - 20px);
+}
+.footer_div .footer_list:last-child {
+    margin-right: 0;
+}
+.footer_div .footer_list h4 {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    color: white;
+}
+.footer_div .footer_list a {
+    display: block;
+    padding-bottom: 5px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+
+}
+.footer_div a:hover {
+    cursor: pointer;
+    color: #186bbc;
+}
+.footer_div .footer_list li {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.footer_div .footer_list span {
+    display: block;
+    padding-top: 25px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+}
+/* RESPONSIVE */
+
+@media(max-width:760px){
+
+    label #button{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background: #222222;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+
+    }
+    #check:checked ~ label #button{
+        display: none;
+    }
+    #check:checked ~ label #X{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1060px) {
+
+    .wrapper {
+        margin: auto;
+        width: 600px;
+    }
+    .main h1 {
+        padding: 20px 0px 0px;
+    }
+    .main p {
+        padding: 20px 0px 0px;
+    }
+
+}
+
+@media only screen and (min-width: 1060px) {
+
+    .wrapper {
+        width: 1000px;
+    }
+
+    .main h1 {
+        padding: 10px 0px 0px;
+    }
+
+    div article img {
+        width: 100%;
+    }
+
+}
+@media(max-width:1060px){
+
+    .footer .footer_div {
+        width: 80%;
+    }
+    .footer_div .footer_logo,
+    .footer_div .footer_list {
+        margin: 5%;
+        width: 100%;
+
+    }
+    nav img {
+        top: 20px;
+        left: 8%;
+        width: 80px;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    .footer_div .footer_logo {
+        width: 50%;
+    }
+}
+
